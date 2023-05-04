@@ -61,9 +61,7 @@ Error generating stack: `+i.message+`
   align-items: center;
   justify-content: space-between;
   min-width: 208px;
-`,M0=()=>{const{setTheme:e}=Y.useContext(Fi),t=()=>{e(n=>n==="light"?"dark":"light")};return C.jsxs(U0,{className:"center",title:"Toggle theme","aria-label":"toggle theme",children:[C.jsx("input",{type:"checkbox",id:"switch"}),C.jsx("label",{htmlFor:"switch",onClick:t})]})},U0=be.button`
-  background-color: transparent;
-  border: 0;
+`,M0=()=>{const{setTheme:e}=Y.useContext(Fi),t=()=>{e(n=>n==="light"?"dark":"light")};return C.jsxs(U0,{className:"center",title:"Toggle theme","aria-label":"toggle theme",children:[C.jsx("input",{type:"checkbox",id:"switch"}),C.jsx("label",{htmlFor:"switch",onClick:t})]})},U0=be.div`
   input[type='checkbox'] {
     height: 0;
     width: 0;
@@ -104,18 +102,18 @@ Error generating stack: `+i.message+`
   label:active:after {
     width: 16px;
   }
-`,B0=()=>{const[e,t]=Y.useState(!1),{font:n,setFont:r}=Y.useContext(Ou),o=()=>{t(l=>!l)},i=l=>{r(l.target.dataset.option),t(!1)};return C.jsxs(H0,{children:[C.jsxs("div",{className:"option--selected",title:"Show font options",onClick:o,id:"dropdown",children:[C.jsx("label",{htmlFor:"dropdown",children:n}),C.jsx("button",{"aria-label":"Show font options",children:C.jsx("img",{src:I0,alt:"show font options","aria-expanded":e,tabIndex:0,"aria-controls":"getOption","aria-label":"Show font options","aria-haspopup":"listbox"})})]}),C.jsxs("div",{className:`options ${e?"show":""}`,"aria-labelledby":"getOption",role:"listbox",children:[C.jsx("div",{className:"option",role:"option",tabIndex:-1,onClick:i,"data-option":"Serif",children:"Serif"}),C.jsx("div",{className:"option",role:"option",tabIndex:-1,onClick:i,"data-option":"Sans Serif",children:"Sans Serif"}),C.jsx("div",{className:"option",role:"option",tabIndex:-1,onClick:i,"data-option":"Mono",children:"Mono"})]})]})},H0=be.div`
+`,B0=()=>{const[e,t]=Y.useState(!1),{font:n,setFont:r}=Y.useContext(Ou),o=()=>{t(l=>!l)},i=l=>{r(l.target.dataset.option),t(!1)};return C.jsxs(H0,{children:[C.jsxs("div",{className:"option--selected",title:"Show font options",onClick:o,id:"dropdown",children:[C.jsx("span",{children:n}),C.jsx("button",{"aria-label":"Show font options",children:C.jsx("img",{src:I0,alt:"show font options","aria-expanded":e,"aria-label":"Show font options","aria-haspopup":"listbox"})})]}),C.jsxs("div",{className:`options ${e?"show":""}`,role:"listbox",children:[C.jsx("div",{className:"option",role:"option",tabIndex:0,onClick:i,"data-option":"Serif",children:"Serif"}),C.jsx("div",{className:"option",role:"option",tabIndex:0,onClick:i,"data-option":"Sans Serif",children:"Sans Serif"}),C.jsx("div",{className:"option",role:"option",tabIndex:0,onClick:i,"data-option":"Mono",children:"Mono"})]})]})},H0=be.div`
   position: relative;
 
   .option--selected {
     min-width: 105px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     cursor: pointer;
   }
 
-  .option--selected > label {
+  .option--selected {
     font-weight: bold;
     cursor: pointer;
     padding-right: 0.5rem;
