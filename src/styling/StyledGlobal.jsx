@@ -4,47 +4,47 @@ export const StyledGlobal = createGlobalStyle`
   @font-face {
     font-family: 'Incosolata';
     font-weight: 400;
-    src: url('/fonts/inconsolata/static/Inconsolata-Regular.ttf')
+    src: url('./fonts/inconsolata/static/Inconsolata-Regular.ttf')
       format('truetype');
   }
 
   @font-face {
     font-family: 'Incosolata';
     font-weight: 700;
-    src: url('/fonts/inconsolata/static/Inconsolata-Bold.ttf')
+    src: url('./fonts/inconsolata/static/Inconsolata-Bold.ttf')
       format('truetype');
   }
 
   @font-face {
     font-family: 'Inter';
     font-weight: 400;
-    src: url('/fonts/inter/static/Inter-Regular.ttf')
+    src: url('./fonts/inter/static/Inter-Regular.ttf')
       format('truetype');
   }
 
   @font-face {
     font-family: 'Inter';
     font-weight: 700;
-    src: url('/fonts/inter/static/Inter-Bold.ttf') format('truetype');
+    src: url('./fonts/inter/static/Inter-Bold.ttf') format('truetype');
   }
 
   @font-face {
     font-family: 'Lora';
     font-weight: 400;
-    src: url('/fonts/lora/static/Lora-Regular.ttf') format('truetype');
+    src: url('./fonts/lora/static/Lora-Regular.ttf') format('truetype');
   }
 
   @font-face {
     font-family: 'Lora';
     font-weight: 700;
-    src: url('/fonts/lora/static/Lora-Bold.ttf') format('truetype');
+    src: url('./fonts/lora/static/Lora-Bold.ttf') format('truetype');
   }
 
   @font-face {
     font-family: 'Lora';
     font-weight: 700;
     font-style: italic;
-    src: url('/fonts/lora/static/Lora-BoldItalic.ttf')
+    src: url('./fonts/lora/static/Lora-BoldItalic.ttf')
       format('truetype');
   }
 
@@ -161,7 +161,7 @@ export const StyledGlobal = createGlobalStyle`
     cursor: pointer;
   }
 
-  button:focus {
+  button:focus-visible {
     outline: 1px solid var(--clr-primary);
   }
 

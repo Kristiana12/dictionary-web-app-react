@@ -7,7 +7,7 @@ const FontSelection = () => {
   const [isOptionsShown, setIsOptionsShown] = useState(false);
   const { font, setFont } = useContext(FontContext);
 
-  const showOptionsHandler = () => {
+  const toggleOptionsHandler = () => {
     setIsOptionsShown((prevState) => !prevState);
   };
 
@@ -21,7 +21,7 @@ const FontSelection = () => {
       <div
         className="option--selected"
         title="Show font options"
-        onClick={showOptionsHandler}
+        onClick={toggleOptionsHandler}
         id="dropdown"
       >
         <span>{font}</span>
