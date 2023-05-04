@@ -21,7 +21,11 @@ const SearchResults = ({ data }) => {
         <span className="colorized">{data?.phonetics[1]?.text}</span>
       </div>
       <div className="search-results--right">
-        <button onClick={playAudioOnClick}>
+        <button
+          onClick={playAudioOnClick}
+          aria-label="play audio"
+          title="Play Audio"
+        >
           {/* <img src={iconPlay} alt="Listen" title="Listen " /> */}
           <svg
             className="circle"

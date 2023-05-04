@@ -20,17 +20,17 @@ const FontSelection = () => {
     <StyledOptionsContainer>
       <div
         className="option--selected"
-        title="Change Font"
+        title="Show font options"
         onClick={showOptionsHandler}
         id="dropdown"
         aria-controls="getOption"
         aria-expanded={isOptionsShown}
-        aria-label="Change Font"
+        aria-label="Show font options"
         aria-haspopup="listbox"
       >
         <label htmlFor="dropdown">{font}</label>
-        <button>
-          <img src={iconArrowDown} />
+        <button aria-label="Show font options">
+          <img src={iconArrowDown} alt="show font options" />
         </button>
       </div>
       <div
