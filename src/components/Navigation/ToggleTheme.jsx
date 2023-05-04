@@ -21,9 +21,7 @@ const ToggleMode = () => {
   );
 };
 
-const ToggleBtn = styled.button`
-  background-color: transparent;
-  border: 0;
+const ToggleBtn = styled.div`
   input[type='checkbox'] {
     height: 0;
     width: 0;

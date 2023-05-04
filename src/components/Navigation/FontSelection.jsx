@@ -24,28 +24,22 @@ const FontSelection = () => {
         onClick={showOptionsHandler}
         id="dropdown"
       >
-        <label htmlFor="dropdown">{font}</label>
+        <span>{font}</span>
         <button aria-label="Show font options">
           <img
             src={iconArrowDown}
             alt="show font options"
             aria-expanded={isOptionsShown}
-            tabIndex={0}
-            aria-controls="getOption"
             aria-label="Show font options"
             aria-haspopup="listbox"
           />
         </button>
       </div>
-      <div
-        className={`options ${isOptionsShown ? 'show' : ''}`}
-        aria-labelledby="getOption"
-        role="listbox"
-      >
+      <div className={`options ${isOptionsShown ? 'show' : ''}`} role="listbox">
         <div
           className="option"
           role="option"
-          tabIndex={-1}
+          tabIndex={0}
           onClick={selectFontHandler}
           data-option="Serif"
         >
@@ -54,7 +48,7 @@ const FontSelection = () => {
         <div
           className="option"
           role="option"
-          tabIndex={-1}
+          tabIndex={0}
           onClick={selectFontHandler}
           data-option="Sans Serif"
         >
@@ -63,7 +57,7 @@ const FontSelection = () => {
         <div
           className="option"
           role="option"
-          tabIndex={-1}
+          tabIndex={0}
           onClick={selectFontHandler}
           data-option="Mono"
         >
@@ -81,11 +75,11 @@ const StyledOptionsContainer = styled.div`
     min-width: 105px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     cursor: pointer;
   }
 
-  .option--selected > label {
+  .option--selected {
     font-weight: bold;
     cursor: pointer;
     padding-right: 0.5rem;
