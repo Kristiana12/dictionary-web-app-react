@@ -10,7 +10,7 @@ const ToggleMode = () => {
   };
 
   return (
-    <ToggleBtn className="center" aria-label="toggle theme">
+    <ToggleBtn className="center" title="toggle theme">
       <input type="checkbox" id="switch" />
       <label htmlFor="switch" onClick={toggleThemeHandler}></label>
     </ToggleBtn>
