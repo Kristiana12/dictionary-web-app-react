@@ -23,24 +23,29 @@ const FontSelection = () => {
         title="Show font options"
         onClick={showOptionsHandler}
         id="dropdown"
-        aria-controls="getOption"
-        aria-expanded={isOptionsShown}
-        aria-label="Show font options"
-        aria-haspopup="listbox"
       >
         <label htmlFor="dropdown">{font}</label>
         <button aria-label="Show font options">
-          <img src={iconArrowDown} alt="show font options" />
+          <img
+            src={iconArrowDown}
+            alt="show font options"
+            aria-expanded={isOptionsShown}
+            tabIndex={0}
+            aria-controls="getOption"
+            aria-label="Show font options"
+            aria-haspopup="listbox"
+          />
         </button>
       </div>
       <div
         className={`options ${isOptionsShown ? 'show' : ''}`}
         aria-labelledby="getOption"
+        role="listbox"
       >
         <div
           className="option"
           role="option"
-          tabIndex={0}
+          tabIndex={-1}
           onClick={selectFontHandler}
           data-option="Serif"
         >
@@ -49,7 +54,7 @@ const FontSelection = () => {
         <div
           className="option"
           role="option"
-          tabIndex={0}
+          tabIndex={-1}
           onClick={selectFontHandler}
           data-option="Sans Serif"
         >
@@ -58,7 +63,7 @@ const FontSelection = () => {
         <div
           className="option"
           role="option"
-          tabIndex={0}
+          tabIndex={-1}
           onClick={selectFontHandler}
           data-option="Mono"
         >
