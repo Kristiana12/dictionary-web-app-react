@@ -61,7 +61,7 @@ Error generating stack: `+i.message+`
   align-items: center;
   justify-content: space-between;
   min-width: 208px;
-`,M0=()=>{const{setTheme:e}=Y.useContext(Fi),t=()=>{e(n=>n==="light"?"dark":"light")};return C.jsxs(U0,{className:"center",title:"Toggle theme","aria-label":"toggle theme",children:[C.jsx("input",{type:"checkbox",id:"switch"}),C.jsx("label",{htmlFor:"switch",onClick:t})]})},U0=be.div`
+`,M0=()=>{const{setTheme:e}=Y.useContext(Fi),t=()=>{e(n=>n==="light"?"dark":"light")};return C.jsxs(U0,{className:"center","aria-label":"toggle theme",children:[C.jsx("input",{type:"checkbox",id:"switch"}),C.jsx("label",{htmlFor:"switch",onClick:t})]})},U0=be.div`
   input[type='checkbox'] {
     height: 0;
     width: 0;
