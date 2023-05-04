@@ -27,7 +27,6 @@ const Search = () => {
 
         if (response.status !== 200) {
           setHasError(true);
-          console.log('Error: !== 200');
           throw new Error('Something went wrong!');
         }
 
@@ -50,13 +49,10 @@ const Search = () => {
         <span className="loader"></span>
       </StyledSpinner>
     );
-    console.log('loading');
   } else if (!isLoading && !hasError && userInput) {
     content = <SearchResults data={data} />;
-    console.log('with data');
   } else if (hasError && !userInput && !isLoading) {
     content = <section></section>;
-    console.log('section');
     //to disable the next expression from runnning
     setHasError(false);
   } else if (hasError && userInput && !isLoading) {
@@ -71,7 +67,6 @@ const Search = () => {
         </p>
       </StyledError>
     );
-    console.log('error');
   }
 
   return (

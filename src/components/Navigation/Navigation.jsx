@@ -26,6 +26,10 @@ const StyledNavigation = styled.nav`
   align-items: center;
   justify-content: space-between;
   min-height: max(70px, 10vh);
+
+  @media screen and (min-width: 768px) {
+    padding: 3.625rem 0 2.125rem;
+  }
 `;
 
 const StyledNavigationLeft = styled.div`

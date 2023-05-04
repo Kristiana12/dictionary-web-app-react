@@ -9,7 +9,7 @@ import { Navigation, Search } from './ExportComponents';
 const App = () => {
   const { theme } = useContext(ThemeContext);
   const { font } = useContext(FontContext);
-  const [fontFamily, setFontFamily] = useState('Inconsolata, monospace');
+  const [fontFamily, setFontFamily] = useState('Lora, serif');
 
   useEffect(() => {
     if (font === 'Sans Serif') {

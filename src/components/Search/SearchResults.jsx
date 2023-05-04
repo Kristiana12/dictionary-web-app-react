@@ -82,8 +82,12 @@ const SearchResults = ({ data }) => {
       {mainContent}
 
       <hr />
-      <StyledFooter>
-        <h3 className="underlined">Source</h3>
+      <StyledFooter
+        style={{
+          alignItems: `${data.sourceUrls.length > 1 ? 'start' : 'center'}`,
+        }}
+      >
+        <h3>Source</h3>
         <div className="source-url">
           {data.sourceUrls.map((source) => (
             <a
@@ -107,12 +111,15 @@ const SearchResults = ({ data }) => {
 
 const StyledHeader = styled.header`
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin: 1.5rem auto 2rem;
 
   .search-results--left h1 {
     margin-bottom: 0.5rem;
+
+    &:first-child {
+      margin-top: 2.8rem;
+    }
   }
 
   @media screen and (min-width: 678px) {
@@ -215,9 +222,13 @@ const StyledList = styled.ul`
 
 const StyledFooter = styled.footer`
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 1rem;
   padding: 1.08rem 0 7rem;
+
+  h3 {
+    font-size: var(--fz-xs);
+  }
 
   .source-url {
     margin-left: 0.5rem;

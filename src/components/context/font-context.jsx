@@ -4,7 +4,7 @@ import { createContext } from 'react';
 const FontContext = createContext();
 
 const ChangeFont = ({ children }) => {
-  const [font, setFont] = useState('Mono');
+  const [font, setFont] = useState('Serif');
 
   const fonts = {
     font,
