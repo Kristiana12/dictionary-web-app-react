@@ -61,7 +61,7 @@ const StyledSearch = styled.form`
     display: block;
     background-color: var(--clr-background-search);
     border-radius: 16px;
-    padding: 0.85rem 1.5rem;
+    padding: 1.1rem 1.5rem;
     font-weight: bold;
 
     &::placeholder {

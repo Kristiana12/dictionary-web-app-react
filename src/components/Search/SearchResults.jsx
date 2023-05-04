@@ -118,7 +118,7 @@ const StyledHeader = styled.header`
     margin-bottom: 0.5rem;
 
     &:first-child {
-      margin-top: 2.8rem;
+      margin-top: 2.2rem;
     }
   }
 
