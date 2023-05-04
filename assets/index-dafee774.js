@@ -221,7 +221,7 @@ Error generating stack: `+i.message+`
     display: block;
     background-color: var(--clr-background-search);
     border-radius: 16px;
-    padding: 0.85rem 1.5rem;
+    padding: 1.1rem 1.5rem;
     font-weight: bold;
 
     &::placeholder {
@@ -257,7 +257,7 @@ Error generating stack: `+i.message+`
     margin-bottom: 0.5rem;
 
     &:first-child {
-      margin-top: 2.8rem;
+      margin-top: 2.2rem;
     }
   }
 
