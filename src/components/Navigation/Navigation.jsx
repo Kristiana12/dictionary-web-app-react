@@ -28,7 +28,10 @@ const StyledNavigation = styled.nav`
   min-height: max(70px, 10vh);
 `;
 
-const StyledNavigationLeft = styled(StyledNavigation)`
+const StyledNavigationLeft = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   min-width: 208px;
 `;
 
