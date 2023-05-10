@@ -1,27 +1,38 @@
 import styled from 'styled-components';
-import { useState, useContext } from 'react';
+import { useState, useContext, useRef, useEffect } from 'react';
 import { iconArrowDown } from '../../ExportComponents';
 import { FontContext } from '../context/font-context';
 
 const FontSelection = () => {
-  const [isOptionsShown, setIsOptionsShown] = useState(false);
+  const [open, setOpen] = useState(false);
   const { font, setFont } = useContext(FontContext);
+  const optionsRef = useRef(null);
 
-  const toggleOptionsHandler = () => {
-    setIsOptionsShown((prevState) => !prevState);
+  const toggleHandler = () => {
+    setOpen((prevState) => !prevState);
   };
+
+  //Close Menu when clicked outside
+  useEffect(() => {
+    let closeOptions = (e) => {
+      if (!optionsRef.current.contains(e.target)) setOpen(false);
+    };
+
+    document.addEventListener('click', closeOptions, true);
+  }, []);
 
   const selectFontHandler = (e) => {
     setFont(e.target.dataset.option);
-    setIsOptionsShown(false);
+    setOpen(false);
   };
 
   return (
     <StyledOptionsContainer>
       <div
+        ref={optionsRef}
         className="option--selected"
         title="Show font options"
-        onClick={toggleOptionsHandler}
+        onClick={toggleHandler}
         id="dropdown"
       >
         <span>{font}</span>
@@ -29,13 +40,13 @@ const FontSelection = () => {
           <img
             src={iconArrowDown}
             alt="show font options"
-            aria-expanded={isOptionsShown}
+            aria-expanded={open}
             aria-label="Show font options"
             aria-haspopup="listbox"
           />
         </button>
       </div>
-      <div className={`options ${isOptionsShown ? 'show' : ''}`} role="listbox">
+      <div className={`options ${open ? 'show' : ''}`} role="listbox">
         <div
           className="option"
           role="option"
