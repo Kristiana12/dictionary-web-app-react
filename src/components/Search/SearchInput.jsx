@@ -19,8 +19,6 @@ const SearchInput = ({ setUserInput }) => {
 
     //Pass data to parent
     setUserInput(inputRef.current.value);
-
-    inputRef.current.value = '';
   };
 
   return (
