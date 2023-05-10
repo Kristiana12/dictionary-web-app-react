@@ -209,7 +209,7 @@ Error generating stack: `+i.message+`
   p {
     margin: 0.5rem 0;
   }
-`,a1=({setUserInput:e})=>{const[t,n]=W.useState(!1),r=W.useRef(),o=()=>{r.current.value.length>0&&n(!1)},i=l=>{l.preventDefault(),r.current.value.length<=0&&n(!0),e(r.current.value),r.current.value=""};return C.jsxs(C.Fragment,{children:[C.jsxs(c1,{onSubmit:i,children:[C.jsx("input",{className:t?"error":"",ref:r,type:"search",name:"search",id:"search",placeholder:"Search for any word...",onChange:o}),C.jsx(f1,{type:"submit",children:C.jsx("img",{src:L0,alt:"Search","aria-label":"Search",title:"Search"})})]}),t&&C.jsx("p",{className:"error-message",children:"Whoops, can’t be empty…"})]})},c1=be.form`
+`,a1=({setUserInput:e})=>{const[t,n]=W.useState(!1),r=W.useRef(),o=()=>{r.current.value.length>0&&n(!1)},i=l=>{l.preventDefault(),r.current.value.length<=0&&n(!0),e(r.current.value)};return C.jsxs(C.Fragment,{children:[C.jsxs(c1,{onSubmit:i,children:[C.jsx("input",{className:t?"error":"",ref:r,type:"search",name:"search",id:"search",placeholder:"Search for any word...",onChange:o}),C.jsx(f1,{type:"submit",children:C.jsx("img",{src:L0,alt:"Search","aria-label":"Search",title:"Search"})})]}),t&&C.jsx("p",{className:"error-message",children:"Whoops, can’t be empty…"})]})},c1=be.form`
   display: flex;
   margin-top: 1rem;
   position: relative;
