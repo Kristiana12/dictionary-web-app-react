@@ -26,7 +26,6 @@ const SearchResults = ({ data }) => {
           aria-label="play audio"
           title="Play Audio"
         >
-          {/* <img src={iconPlay} alt="Listen" title="Listen " /> */}
           <svg
             className="circle"
             xmlns="http://www.w3.org/2000/svg"
@@ -222,16 +221,33 @@ const StyledList = styled.ul`
 
 const StyledFooter = styled.footer`
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 1.08rem 0 7rem;
+
+  @media screen and (min-width: 678px) {
+    align-items: center;
+  }
 
   h3 {
     font-size: var(--fz-xs);
   }
 
   .source-url {
-    margin-left: 0.5rem;
+    @media screen and (min-width: 678px) {
+      margin-left: 0.5rem;
+    }
+
+    .link {
+      /* These are technically the same, but use both */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+
+      word-break: break-word;
+
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      hyphens: auto;
+    }
   }
 
   button {
