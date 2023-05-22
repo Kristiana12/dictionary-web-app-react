@@ -1,12 +1,12 @@
-# Frontend Mentor - Dictionary web app solution
+<a name='#readme-top'></a>
 
-This is a solution to the [Dictionary web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+# Frontend Mentor - Dictionary web app solution
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Project Preview](#project-preview)
+  - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -27,9 +27,9 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Project Preview
+### Screenshot
 
-![](./preview.jpg)
+![](./screenshot.png)
 
 ## My process
 
