@@ -227,6 +227,7 @@ const StyledFooter = styled.footer`
 
   @media screen and (min-width: 678px) {
     align-items: center;
+    flex-wrap: nowrap;
   }
 
   h3 {
@@ -238,7 +239,11 @@ const StyledFooter = styled.footer`
       margin-left: 0.5rem;
     }
 
+    /* Better Line Breaks for Long URLs source: https://css-tricks.com/better-line-breaks-for-long-urls/ */
     .link {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
       /* These are technically the same, but use both */
       overflow-wrap: break-word;
       word-wrap: break-word;
